@@ -1,0 +1,22 @@
+circle {
+  stroke: #555;
+  stroke-width: 0.25px;
+}
+
+body {
+  font-family: "Courier New";
+  fill: #111111;
+}
+
+#construction {
+  width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#viz_link {
+  width: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
