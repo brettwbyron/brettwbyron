@@ -1,0 +1,50 @@
+<ClassList>
+    <Class>
+        <department abbr="I">INFO</department>
+        <title>
+            <number>201</number>
+            <name>Math Foundations of Informatics</name>
+        </title>
+        <credits>4</credits>
+        <days>MW</days><class building="LH" room="102"/></Class>
+    <Class>
+        <department abbr="I">INFO</department>
+        <title>
+            <number>210</number>
+            <name>Information Infrastructure I</name>
+        </title>
+        <credits>4</credits>
+        <days>MW</days><class building="SB" room="015"/></Class>
+    <Class>
+        <department abbr="L">BIOL</department>
+        <title>
+            <number>311</number>
+            <name>Genetics</name>
+        </title>
+        <credits>3</credits>
+        <days>TR</days><class building="JH" room="A100"/></Class>
+    <Class>
+        <department abbr="M">BIOL</department>
+        <title>
+            <number>550</number>
+            <name>Microbiology</name>
+        </title>
+        <credits>3</credits>
+        <days>MWF</days><class building="JH" room="124"/></Class>
+    <Class>
+        <department abbr="A">BUS</department>
+        <title>
+            <number>200</number>
+            <name>Foundations of Accounting</name>
+        </title>
+        <credits>3</credits>
+        <days>MW</days><class building="HH" room="109"/></Class>
+    <Class>
+        <department abbr="A">BUS</department>
+        <title>
+            <number>325</number>
+            <name>Cost Accounting</name>
+        </title>
+        <credits>3</credits>
+        <days>MW</days><class building="HH" room="3030"/></Class>
+</ClassList>
