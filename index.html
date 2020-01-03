@@ -1,102 +1,46 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!DOCTYPE>
+<html>
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/style/style.css">
-    <script src="//https:www.brettwbyron.com/resources/jquery-ui-min-js" type="text/javascript"></script>
-    <script src="https://use.fontawesome.com/c06f28a967.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"
-        integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous">
-    </script>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="./resources/d3.min.js" charset="utf-8"></script>
-    <script src="./script/home.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://kit.fontawesome.com/1959eafa5f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./resources/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./resources/snap.svg.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./script/home.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
     <title>Brett W Byron</title>
-    <script>
-        var margin = 40,
-            width = 960 - margin * 2,
-            height = 500 - margin * 2;
-        var x = d3.scale.ordinal()
-            .domain( d3.range( 40 ) )
-            .rangePoints( [ width, 0 ] );
-        var y = d3.scale.ordinal()
-            .domain( d3.range( 40 ) )
-            .rangePoints( [ 0, height ] );
-        var z = d3.scale.linear()
-            .domain( [ 0, 10, 20, 30, 40 ] )
-            .range( [ d3.rgb( '#fcffd9' ), d3.rgb( '#eac1c8' ), d3.rgb( '#e2a3c3' ), d3.rgb( '#31355f' ), d3.rgb(
-                '#011933' ) ] );
-        var svg = d3.select( '#construction' )
-            .append( "svg" )
-            .attr( "width", width + margin * 2 )
-            .attr( "height", height + margin * 2 )
-            .append( "g" )
-            .attr( "transform", "translate(" + margin + "," + margin + ")" );
-        svg.selectAll( "circle" )
-            .data( y.domain() )
-            .enter()
-            .append( "circle" )
-            .attr( "r", 12 )
-            .attr( "cx", 0 )
-            .attr( "cy", height )
-            .style( "fill", function ( d ) {
-                return z( d );
-            } )
-            .style( "stroke", function ( d ) {
-                return z( 40 - d );
-            } )
-            .transition()
-            .duration( 2000 )
-            .ease( "linear" )
-            .delay( function ( d ) {
-                return d * 300;
-            } )
-            .each( slide );
-
-        function slide() {
-            var circle = d3.select( this );
-            ( function repeat() {
-                circle = circle.transition()
-                    .attr( "r", 12 )
-                    .attr( "cx", 0 )
-                    .attr( "cy", 0 )
-                    .transition()
-                    .attr( "r", 25 )
-                    .attr( "cx", width / 2 )
-                    .attr( "cy", ( height / 2 ) - 40 )
-                    .transition()
-                    .attr( "r", 12 )
-                    .attr( "cx", width )
-                    .attr( "cy", 0 )
-                    .transition()
-                    .attr( "r", 12 )
-                    .attr( "cx", width )
-                    .attr( "cy", height )
-                    .transition()
-                    .attr( "r", 25 )
-                    .attr( "cx", width / 2 )
-                    .attr( "cy", ( height / 2 ) + 40 )
-                    .transition()
-                    .attr( "r", 12 )
-                    .attr( "cx", 0 )
-                    .attr( "cy", height )
-                    .each( "end", repeat );
-            } )();
-        }
-        svg.append( "text" )
-            .style( "fill", "black" )
-            .attr( "y", height / 2 )
-            .attr( "x", width / 2 )
-            .style( "text-decoration", "underline" )
-            .attr( "text-anchor", "middle" )
-            .text( "UNDER CONSTRUCTION" );
-    </script>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 </head>
 
 <body>
-    <div id="construction" class="construction-class"></div>
-    <div id="viz_link" class="vizLink"><a href="./daylight/SleepDataViz.html">View my Daylight Vizualization</a></div>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a><i class="fa fa-home"></i></a></li>
+                <li><a>About</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <div class="logo-animation">
+                    <path class="capital" d="M11.2,300V11.7h155.5c0,0,39,2.3,48.5,41.1c8.8,35.9-18.1,51.3-18.1,51.3" />
+                    <path id="bowl" class="lower" d="M131.5,133c39.8,0,72,32.2,72,72s-32.2,72-72,72s-72-32.2-72-72C59.5,165.3,91.8,133,131.5,133 M131.5,110c-52.5,0-95,42.5-95,95s42.5,95,95,95s95-42.5,95-95S184,110,131.5,110z" />
+                    <rect id="stem" x="36" y="277" class="lower" width="23" height="23" /> <!-- final y="36" height="264" -->
+                </div>
+                <!-- <div class="construction"></div> -->
+            </section>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>

@@ -1,22 +1,4 @@
-circle {
-  stroke: #555;
-  stroke-width: 0.25px;
-}
-
-body {
-  font-family: "Courier New";
-  fill: #111111;
-}
-
-.construction-class {
-  width: 1000px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.viz_link {
-  width: 300px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
+.logo {background:url(../images/logo.svg) no-repeat center;background-size:contain;height:100px;width:auto;}
+.logo-animation svg {height:400px;}
+.lower {fill: #046380;}
+.capital {fill: none;stroke: #7F7978;stroke-width: 22.7341;stroke-miterlimit: 10;}
