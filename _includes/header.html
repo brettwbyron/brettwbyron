@@ -1,0 +1,17 @@
+<header class="page-header">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+      <nav>
+      <ul class="list-inline">
+        <li><a href="/CWS/"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="/CWS/code"><i class="fa fa-code"></i>Code</a></li>
+        <li><a href="/CWS/config"><i class="fa fa-cog"></i>Configuration</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

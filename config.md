@@ -1,23 +1,12 @@
-<link type="text/css" rel="stylesheet" href="assets/css/config.css" />
 
-<nav>
-  <ul class="list-inline">
-    <li><a href="/">Home</a></li>
-    <li><a href="/config.html">Configuration</a></li>
-  </ul>
-</nav>
 
 ## Configuration Links
 
-[edit this page](https://github.com/brettwbyron-jobvite/brettwbyron-jobvite.github.io/edit/master/README.md)
+[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/){:target="_blank" rel="noopener"}
 
-[`_config.yml` repository settings](https://github.com/brettwbyron-jobvite/brettwbyron-jobvite.github.io/settings)
+[GitHub Pages Documentation](https://help.github.com/categories/github-pages-basics/){:target="_blank" rel="noopener"}
 
-[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-[documentation](https://help.github.com/categories/github-pages-basics/)
-
-[Jekyll](https://jekyllrb.com/)
+[Jekyll](https://jekyllrb.com/){:target="_blank" rel="noopener"}
 
 ### Markdown
 
