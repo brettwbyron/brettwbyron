@@ -1,0 +1,46 @@
+.logo {
+  background: url(../images/logo.svg) no-repeat center;
+  background-size: contain;
+  height: 100px;
+  width: auto;
+}
+
+svg.logo-animation {
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
+}
+
+.lower, .capital {
+  fill: none;
+  stroke-width: 23;
+  stroke-miterlimit: 10;
+  -webkit-transition: stroke-dashoffset 2s ease-in-out;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.lower#stem {
+  stroke: rgba(39, 39, 39, 0.75);
+  stroke-dashoffset: 264;
+  stroke-dasharray: 264,264;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.lower#bowl {
+  stroke: rgba(243, 116, 79, 0.75);
+  stroke-dashoffset: 523.9476318359375;
+  stroke-dasharray: 523.9476318359375,523.9476318359375;
+  -webkit-transition: stroke-dashoffset 1.5s ease-in-out;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+.capital {
+  stroke: rgba(165, 192, 205, 0.75);
+  stroke-dashoffset: 570.0023803710938;
+  stroke-dasharray: 570.0023803710938,570.0023803710938;
+}
+/*# sourceMappingURL=style.css.map */

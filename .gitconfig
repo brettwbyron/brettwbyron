@@ -1,0 +1,22 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/brettwbyron/brettwbyron.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[git-ftp]
+	user = brett@brettwbyron.com
+	url = ftp://ftp.brettwbyron.com
+	password = Arlum Village
+	keychain = ftp.brettwbyron.com
+[git-ftp "local"]
+	url = ftp.brettwbyron.com:8080/local
+	password = paka
+[git-ftp "develop"]
+	user = brett
+	url = ftp.brettwbyron.com
+	password = Arlum Village
