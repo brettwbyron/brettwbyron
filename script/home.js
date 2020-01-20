@@ -3,7 +3,7 @@ function animateLines(elem) {
     elem.attr({strokeDashoffset: 0});
 }
 
-window.onload = function() {
+$(document).on('ready', function() {
     var s = Snap('svg.logo-animation');
     var capital = s.select('#capital');
     var capLen = capital.getTotalLength();
@@ -15,7 +15,7 @@ window.onload = function() {
         animateLines(stem);
         animateLines(bowl);
     }, 1000);
-}
+});
 
 
 

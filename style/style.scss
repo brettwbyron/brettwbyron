@@ -5,28 +5,68 @@ $color-gray: #272727;
 $color-blue: #9db6d8;
 $color-red: #de8e8b;
 
+.logo {
+    background: url(../images/logo.svg) no-repeat center;
+    background-size: contain;
+    height: 100px;
+    width: auto;
+}
 
+svg.logo-animation {
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
 
-.logo {background:url(../images/logo.svg) no-repeat center;background-size:contain;height:100px;width:auto;}
-svg.logo-animation {height:300px;position: absolute;top: 50%;left: 50%;transform: translate(-40%,-50%);}
-.lower, .capital {fill:none;stroke-width:23;stroke-miterlimit:10;transition:stroke-dashoffset 2s ease-in-out;}
+.lower,
+.capital {
+    fill: none;
+    stroke-width: 23;
+    stroke-miterlimit: 10;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
 .lower {
     &#stem {
         stroke: rgba($color-gray, 0.75);
         stroke-dashoffset: 264;
-        stroke-dasharray: 264,264;
-        transition:stroke-dashoffset 1s ease-in-out;
+        stroke-dasharray: 264, 264;
+        transition: stroke-dashoffset 1s ease-in-out;
     }
+
     &#bowl {
         stroke: rgba($color-primary, 0.75);
         stroke-dashoffset: 523.9476318359375;
-        stroke-dasharray: 523.9476318359375,523.9476318359375;
-        transition:stroke-dashoffset 1.5s ease-in-out;
+        stroke-dasharray: 523.9476318359375, 523.9476318359375;
+        transition: stroke-dashoffset 1.5s ease-in-out;
     }
 }
 
 .capital {
     stroke: rgba(165, 192, 205, 0.75);
     stroke-dashoffset: 570.0023803710938;
-    stroke-dasharray: 570.0023803710938,570.0023803710938;
+    stroke-dasharray: 570.0023803710938, 570.0023803710938;
+}
+
+// Animoji
+#animoji {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#animoji .animoji-frame {
+    & :first-of-type {
+        opacity: 1;
+    }
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: all 0.01s linear;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
