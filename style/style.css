@@ -1,23 +1,82 @@
-circle {
-  stroke: #555;
-  stroke-width: 0.25px;
+.logo {
+  background: url(../images/logo.svg) no-repeat center;
+  background-size: contain;
+  height: 100px;
+  width: auto;
 }
 
-body {
-  font-family: "Courier New";
-  fill: #111111;
+svg.logo-animation {
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
 }
 
-.construction-class {
-  width: 1000px;
-  position: relative;
-  margin: 0 auto;
+.lower, .capital {
+  fill: none;
+  stroke-width: 23;
+  stroke-miterlimit: 10;
+  -webkit-transition: stroke-dashoffset 2s ease-in-out;
+  transition: stroke-dashoffset 2s ease-in-out;
 }
 
-.viz_link {
-  width: 300px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+.lower#stem {
+  stroke: rgba(39, 39, 39, 0.75);
+  stroke-dashoffset: 264;
+  stroke-dasharray: 264,264;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.lower#bowl {
+  stroke: rgba(243, 116, 79, 0.75);
+  stroke-dashoffset: 523.9476318359375;
+  stroke-dasharray: 523.9476318359375,523.9476318359375;
+  -webkit-transition: stroke-dashoffset 1.5s ease-in-out;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+.capital {
+  stroke: rgba(165, 192, 205, 0.75);
+  stroke-dashoffset: 570.0023803710938;
+  stroke-dasharray: 570.0023803710938,570.0023803710938;
 }
 /*# sourceMappingURL=style.css.map */
+/* // Animoji */
+#animoji {height:300px;width:100%;max-width:300px;position:absolute;top:50%;left:50%;-webkit-transform: translate(-40%, -50%);transform: translate(-40%, -50%);}
+#animoji .animoji-frame {position:absolute;max-width:300px;width:100%;height:300px;opacity:0;transition:all 0.01s linear;background-size:contain;background-repeat:no-repeat;background-position:center;}
+#animoji .animoji-frame:first-of-type {opacity:1;}
+
+/* Coming Soon */
+#coming_soon path:nth-of-type(1) {
+  stroke: #B0D9D2;
+}
+#coming_soon path:nth-of-type(2) {
+  stroke: #DE897C;
+}
+#coming_soon path:nth-of-type(3) {
+  stroke: #7693A6;
+}
+#coming_soon path:nth-of-type(4) {
+  stroke: #FFF8BF;
+}
+#coming_soon path:nth-of-type(5) {
+  stroke: #378769;
+}
+#coming_soon path:nth-of-type(6) {
+  stroke: #B0D9D2;
+}
+#coming_soon path:nth-of-type(7) {
+  stroke: #DE897C;
+}
+#coming_soon path:nth-of-type(8) {
+  stroke: #7693A6;
+}
+#coming_soon path:nth-of-type(9) {
+  stroke: #FFF8BF;
+}
+#coming_soon path:nth-of-type(10) {
+  stroke: #378769;
+}

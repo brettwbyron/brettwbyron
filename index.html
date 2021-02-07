@@ -1,16 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="/style/style.css">
-    <script src="https://use.fontawesome.com/c06f28a967.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="/resources/d3.min.js" charset="utf-8"></script>
-    <script src="/script/home.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://kit.fontawesome.com/1959eafa5f.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./resources/d3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./resources/snap.svg.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./script/home.js"></script>
+	<link href="./style/style.css" rel="stylesheet" type="text/css" />
 	<title>Brett W Byron</title>
+	<link href="/favicon.png" rel="icon" type="image/png" />
 </head>
+
 <body>
-    <div id="construction" class="construction-class"></div>
-    <div id="viz_link" class="vizLink"><a href="./daylight/SleepDataViz.html">View my Daylight Vizualization</a></div>
+	<header>
+        <svg class="logo-animation animate" viewBox="0 0 228.77 299.9">
+        	<path class="capital" d="M11.2,300V11.7h155.5c0,0,39,2.3,48.5,41.1c8.8,35.9-18.1,51.3-18.1,51.3" id="capital"></path>
+        	<line class="lower" id="stem" x1="47.5" x2="47.5" y1="300" y2="36"></line>
+        	<path class="lower" d="M131.5,288.6c-45.1,0-84-38.9-84-83.6s38.4-83.4,84-83.4s83.2,37.7,83.2,83.5 S178.3,288.6,131.5,288.6" id="bowl"></path>
+        </svg>
+        <nav class="hide">
+            <ul>
+                <li><a><i class="fa fa-home"></i></a></li>
+                <li><a>About</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	<main>
+		<article>
+			<section>
+				<svg id="coming_soon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1735.84 191.9">
+					<path d="M0,95.71C0,42.68,40.03,0,96.5,0c34.2,0,64.16,17.5,79.54,44.54l-12.46,7.16c-12.2-22.8-37.91-38.18-67.08-38.18 c-48.78,0-82.45,36.59-82.45,82.19S47.72,177.9,96.5,177.9c29.43,0,55.41-15.64,67.61-38.97l12.46,7.16 c-15.11,27.31-45.34,45.34-80.07,45.34C40.03,191.42,0,148.73,0,95.71z"/>
+					<path d="M189.23,96.19c0-53.02,42.15-95.71,95.71-95.71c53.55,0,95.71,42.68,95.71,95.71c0,53.02-42.15,95.71-95.71,95.71 C231.39,191.9,189.23,149.21,189.23,96.19z M366.6,96.19c0-45.6-35.79-82.19-81.66-82.19c-45.87,0-81.66,36.59-81.66,82.19 s35.79,82.19,81.66,82.19C330.81,178.38,366.6,141.79,366.6,96.19z"/>
+					<path d="M571.66,188.98h-14.05V24.07l-68.67,114h-2.39l-68.67-114v164.91h-14.05V3.4h17.5l66.28,109.76L553.9,3.4h17.76V188.98z"/>
+					<path d="M608.89,3.4v185.58h-14.05V3.4H608.89z"/>
+					<path d="M767.84,3.4v185.58h-12.46l-109.5-159.6v159.6h-14.05V3.4h12.2L753.79,163V3.4H767.84z"/>
+					<path d="M967.41,109.71c0,44.81-34.2,82.19-89.61,82.19c-57.53,0-97.56-42.68-97.56-95.71c0-53.02,40.03-95.71,96.5-95.71 c34.47,0,64.43,18.03,79.8,44.81l-12.46,7.42C931.88,29.38,905.9,14,876.74,14c-48.78,0-82.45,36.59-82.45,82.19 s33.67,82.19,83.51,82.19c45.07,0,72.38-27.84,75.29-62.57h-78.74v-13.26h93.06V109.71z"/>
+					<path d="M1039.7,148.15l12.2-7.16c6.36,22.27,25.19,37.38,55.68,37.38c31.02,0,46.66-15.91,46.66-37.12 c0-22.27-19.62-30.75-47.99-39.77c-31.02-10.07-58.86-18.82-58.86-51.17c0-30.49,24.66-49.84,56.21-49.84 c30.49,0,50.64,17.5,59.65,38.97l-11.93,6.63c-6.89-16.7-21.21-32.08-47.72-32.08c-25.72,0-41.89,15.11-41.89,35.79 c0,22.27,18.82,29.16,45.34,37.91c32.88,10.87,61.51,21.21,61.51,53.29c0,30.75-24.12,50.9-60.98,50.9 C1072.84,191.9,1048.19,174.4,1039.7,148.15z"/>
+					<path d="M1181.23,96.19c0-53.02,42.15-95.71,95.71-95.71s95.71,42.68,95.71,95.71c0,53.02-42.15,95.71-95.71,95.71 S1181.23,149.21,1181.23,96.19z M1358.6,96.19c0-45.6-35.79-82.19-81.66-82.19c-45.87,0-81.66,36.59-81.66,82.19 s35.79,82.19,81.66,82.19C1322.81,178.38,1358.6,141.79,1358.6,96.19z"/>
+					<path d="M1385.23,96.19c0-53.02,42.15-95.71,95.71-95.71s95.71,42.68,95.71,95.71c0,53.02-42.15,95.71-95.71,95.71 S1385.23,149.21,1385.23,96.19z M1562.6,96.19c0-45.6-35.79-82.19-81.66-82.19c-45.87,0-81.66,36.59-81.66,82.19 s35.79,82.19,81.66,82.19C1526.81,178.38,1562.6,141.79,1562.6,96.19z"/>
+					<path d="M1735.84,3.4v185.58h-12.46l-109.5-159.6v159.6h-14.05V3.4h12.2L1721.79,163V3.4H1735.84z"/>						
+				</svg>
+			</section>
+		</article>
+	</main>
+
+	<footer></footer>
 </body>
+
 </html>

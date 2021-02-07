@@ -1,0 +1,33 @@
+
+<html>
+<head><title>Acme</title></head>
+<body>
+
+<h1>Acme Real Estate Company</h1>
+
+<p><a href="http://cgi.soic.indiana.edu/~bwbyron/bwbyron_A7_real_estate.cgi?choice=showall">View All Clients</a></p>
+
+<form action="http://cgi.soic.indiana.edu/~bwbyron/bwbyron_A7_real_estate.cgi" method="get">
+	<input type="hidden" value="addperson" name="choice">
+	First Name: <input type="text" name="first" /><br />
+	Last Name: <input type="text" name="last" /><br />
+	Birthdate (yyyy-mm-dd): <input type="text" name="birth" /><br />
+	Age (number): <input type="text" name="age" /><br />
+	<input type="reset" value="Reset All Fields">&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="Add Client"><br />
+</form>
+
+<br />
+<p><a href="http://cgi.soic.indiana.edu/~bwbyron/bwbyron_A7_real_estate.cgi?choice=showallhouses">View All Houses</a></p>
+<br />
+
+<form action="http://cgi.soic.indiana.edu/~bwbyron/bwbyron_A7_real_estate.cgi" method="get">
+	<input type="hidden" value="addhouse" name="choice">
+	City: <input type="text" name="city" /><br />
+	Value (in $): <input type="text" name="value" /><br />
+	Owner (number): <input type="text" name="owner" /><br />
+	<input type="reset" value="Reset All Fields">&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="Add House"><br />
+</form>
+</body>
+</html>

@@ -1,76 +1,132 @@
-var margin = 40,
-    width = 960 - margin * 2,
-    height = 500 - margin * 2;
-var x = d3.scale.ordinal()
-    .domain(d3.range(40))
-    .rangePoints([width, 0]);
-var y = d3.scale.ordinal()
-    .domain(d3.range(40))
-    .rangePoints([0, height]);
-var z = d3.scale.linear()
-    .domain([0, 10, 20, 30, 40])
-    .range([d3.rgb('#fcffd9'), d3.rgb('#eac1c8'), d3.rgb('#e2a3c3'), d3.rgb('#31355f'), d3.rgb('#011933')]);
-var svg = d3.select('#construction')
-    .append("svg")
-    .attr("width", width + margin * 2)
-    .attr("height", height + margin * 2)
-    .append("g")
-    .attr("transform", "translate(" + margin + "," + margin + ")");
-svg.selectAll("circle")
-    .data(y.domain())
-    .enter()
-    .append("circle")
-    .attr("r", 12)
-    .attr("cx", 0)
-    .attr("cy", height)
-    .style("fill", function (d) {
-        return z(d);
-    })
-    .style("stroke", function (d) {
-        return z(40 - d);
-    })
-    .transition()
-    .duration(2000)
-    .ease("linear")
-    .delay(function (d) {
-        return d * 300;
-    })
-    .each(slide);
-
-function slide() {
-    var circle = d3.select(this);
-    (function repeat() {
-        circle = circle.transition()
-            .attr("r", 12)
-            .attr("cx", 0)
-            .attr("cy", 0)
-            .transition()
-            .attr("r", 25)
-            .attr("cx", width / 2)
-            .attr("cy", (height / 2) - 40)
-            .transition()
-            .attr("r", 12)
-            .attr("cx", width)
-            .attr("cy", 0)
-            .transition()
-            .attr("r", 12)
-            .attr("cx", width)
-            .attr("cy", height)
-            .transition()
-            .attr("r", 25)
-            .attr("cx", width / 2)
-            .attr("cy", (height / 2) + 40)
-            .transition()
-            .attr("r", 12)
-            .attr("cx", 0)
-            .attr("cy", height)
-            .each("end", repeat);
-    })();
+function animateLines(elem) {
+    // Go!
+    elem.attr({strokeDashoffset: 0});
 }
-svg.append("text")
-    .style("fill", "black")
-    .attr("y", height / 2)
-    .attr("x", width / 2)
-    .style("text-decoration", "underline")
-    .attr("text-anchor", "middle")
-    .text("UNDER CONSTRUCTION");
+
+function zoomInOut( elem, z ) {
+	elem.animate( {
+		transform: 's' + z
+	}, 1500, mina.elastic, function () {
+		elem.animate( {
+			transform: 's1'
+		}, 1000, mina.elastic );
+	} );
+}
+
+$(document).on('ready', function() {
+    var s = Snap('svg.logo-animation');
+    var capital = s.select('#capital');
+    var capLen = capital.getTotalLength();
+    var stem = s.select('#stem');
+    var bowl = s.select('#bowl');
+
+    this.setTimeout(() => {
+        animateLines(capital);
+        animateLines(stem);
+        animateLines(bowl);
+    }, 1000);
+    this.setTimeout( () => {
+		svgElem.classList.remove( 'animate' );
+	}, 3000 );
+	this.setTimeout( () => {
+		navElem.classList.remove( 'hide' );
+	}, 3500 );
+
+    var cs = Snap('svg#coming_soon');
+    var letters = cs.selectAll('path');
+    console.log('cs ~>',cs);
+    console.log('letters ~>',letters);
+    letters.forEach(function( letter ) {
+        zoomInOut( letter, 1.5 );
+    });
+});
+
+
+
+// plane flying globe example thing
+// window.onload = function () {
+//     var g = Snap();
+//     g.attr( {
+//         viewBox: [ 0, 0, 800, 600 ]
+//     } );
+
+//     Snap.load( "map.svg", function ( f ) {
+//         function getShift( dot ) {
+//             return "t" + ( 400 - dot.x ) + "," + ( 300 - dot.y );
+//         }
+//         var gr = f.select( "g" ),
+//             wrd = f.select( "#world" ).attr( {
+//                 fill: "#fff"
+//             } ),
+//             syd = f.select( "#sydney" ).attr( {
+//                 fill: "red"
+//             } ),
+//             msk = f.select( "#san_francisco" ).attr( {
+//                 fill: "red"
+//             } ),
+//             pth = f.select( "#flight" ),
+//             pln = f.select( "#plane" ),
+//             top = g.g();
+//         top.attr( {
+//             mask: g.rect( 100, 0, 600, 600 ).attr( {
+//                 fill: "r(.5,.5,.25)#fff-#000"
+//             } )
+//         } );
+//         top.add( gr );
+//         var click = top.text( 410, 310, "click!" ).attr( {
+//             font: "20px Source Sans Pro, sans-serif",
+//             fill: "#fff"
+//         } );
+//         pth.attr( {
+//             display: "none"
+//         } );
+//         pln = gr.g( pln, pln.clone() );
+//         pln.attr( {
+//             display: "none"
+//         } );
+//         pln[ 0 ].attr( {
+//             stroke: "#fff",
+//             strokeWidth: 2
+//         } );
+//         gr.attr( {
+//             transform: getShift( {
+//                 x: syd.attr( "cx" ),
+//                 y: syd.attr( "cy" )
+//             } )
+//         } );
+//         var flight = gr.path().attr( {
+//             fill: "none",
+//             stroke: "red",
+//             strokeWidth: 3,
+//             strokeDasharray: "5 3"
+//         } ).insertBefore( pln );
+//         window.onclick = function () {
+//             pln.attr( {
+//                 display: ""
+//             } );
+//             click.attr( {
+//                 display: "none"
+//             } );
+//             var flag,
+//                 len = Snap.path.getTotalLength( pth.attr( "d" ) );
+//             Snap.animate( 0, len, function ( l ) {
+//                 // Safari bug workaround: forcing redraw
+//                 g.attr( {
+//                     width: 100 + ( flag = !flag ? 1e-5 : 0 ) + "%"
+//                 } );
+//                 //
+//                 var dot = pth.getPointAtLength( l );
+//                 flight.attr( {
+//                     d: pth.getSubpath( 0, l )
+//                 } );
+//                 pln.attr( {
+//                     transform: "t" + [ dot.x, dot.y ] +
+//                         "r" + ( dot.alpha - 90 )
+//                 } );
+//                 gr.attr( {
+//                     transform: getShift( dot )
+//                 } );
+//             }, 10000 );
+//         };
+//     } );
+// };

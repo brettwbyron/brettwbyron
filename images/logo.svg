@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 228.7 300" style="enable-background:new 0 0 228.7 300;" xml:space="preserve">
+<style type="text/css">
+	.lower, .capital {fill:none;stroke-width:23;stroke-miterlimit:10;}
+	.lower#stem {stroke:rgba(39,39,39,0.75)}
+	.lower#bowl {stroke:rgba(243,116,79,0.75);}
+	.capital {stroke:rgba(165,192,205,0.75);}
+</style>
+<path id="capital" class="capital" d="M11.2,300V11.7h155.5c0,0,39,2.3,48.5,41.1c8.8,35.9-18.1,51.3-18.1,51.3"/>
+<line id="stem" class="lower" x1="47.5" y1="300" x2="47.5" y2="277"/>
+<path id="bowl" class="lower" d="M131.5,288.6c-45.1,0-84-38.9-84-83.6s38.4-83.4,84-83.4s83.2,37.7,83.2,83.5 S178.3,288.6,131.5,288.6"/>
+</svg>
